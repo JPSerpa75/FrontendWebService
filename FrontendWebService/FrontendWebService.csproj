@@ -105,8 +105,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
-    <Content Include="Contact.aspx" />
+    <Content Include="Calculadora.aspx" />
+    <Content Include="ConversorMedidas.aspx" />
+    <Content Include="Fatorial.aspx" />
+    <Content Include="Imc.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -161,20 +163,34 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
+    <Compile Include="Calculadora.aspx.cs">
+      <DependentUpon>Calculadora.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
+    <Compile Include="Calculadora.aspx.designer.cs">
+      <DependentUpon>Calculadora.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
+    <Compile Include="ConversorMedidas.aspx.cs">
+      <DependentUpon>ConversorMedidas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
+    <Compile Include="ConversorMedidas.aspx.designer.cs">
+      <DependentUpon>ConversorMedidas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Fatorial.aspx.cs">
+      <DependentUpon>Fatorial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fatorial.aspx.designer.cs">
+      <DependentUpon>Fatorial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Imc.aspx.cs">
+      <DependentUpon>Imc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Imc.aspx.designer.cs">
+      <DependentUpon>Imc.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
