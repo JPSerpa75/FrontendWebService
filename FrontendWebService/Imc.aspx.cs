@@ -13,5 +13,13 @@ namespace FrontendWebService
         {
 
         }
+
+        protected void btnImc_Click(object sender, EventArgs e)
+        {
+            var peso = Convert.ToDecimal(txtPeso.Text);
+            var altura = Convert.ToDecimal(txtAltura.Text);
+            var soma = peso + altura;
+            lblResultado.Text = soma.ToString();
+        }
     }
 }
