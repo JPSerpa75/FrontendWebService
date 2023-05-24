@@ -29,9 +29,9 @@ namespace FrontendWebService
 
             string medida;
 
-            if (RdBtnJardas.Checked)
+            if (RdBtnPolegadas.Checked)
             {
-                medida = RdBtnJardas.Value;
+                medida = RdBtnPolegadas.Value;
             }else if(RdBtnMilhas.Checked)
             {
                 medida = RdBtnMilhas.Value;
@@ -41,7 +41,7 @@ namespace FrontendWebService
             }
             else
             {
-                medida = RdBtnPolegadas.Value;
+                medida = RdBtnJardas.Value;
             }
 
             WsBackend.BackEnd ws = new WsBackend.BackEnd();

@@ -14,7 +14,7 @@
             <div class="radios">
                 <label class="d-block  form-label">Converter para:</label>
                 <div class="row">
-                    <input type="radio" runat="server" class="form-check-input" id="RdBtnJardas" runat="server" value="jardas" name="unidade" />
+                    <input type="radio" runat="server" class="form-check-input" id="RdBtnJardas" runat="server" value="jardas" name="unidade" checked />
                     <asp:Label ID="Label1" runat="server" Text="Jardas" for="RdBtnJardas"></asp:Label>
                 </div>
 
@@ -52,7 +52,7 @@
         txtValor.addEventListener("keypress", function (e) {
             var keycode = (e.keyCode ? e.keyCode : e.wich)
 
-            if (keycode < 48 || keycode > 58) {
+            if ((keycode < 48 || keycode > 58) && keycode!== 44) {
                 e.preventDefault();
             }
         })
