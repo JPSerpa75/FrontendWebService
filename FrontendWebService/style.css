@@ -1,0 +1,38 @@
+﻿.form-group{
+    margin: auto;
+    width: 50%;
+}
+
+h3 {
+    margin: 3rem 0;
+    text-align: center;
+}
+
+label{
+    display:block;
+    margin-top: 1rem;
+}
+
+.row{
+    margin: 0;
+}
+
+.form-control{
+    width: 100%;
+}
+
+.btn{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+.content {
+    margin: auto;
+    width: 50%;
+}
+
+#MainContent_lblResposta {
+    margin-top: 2rem;
+    text-align: center;
+}
