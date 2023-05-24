@@ -46,7 +46,17 @@
 
 
 
+    <script>
+        var txtValor = document.getElementById("MainContent_txtValor");
 
+        txtValor.addEventListener("keypress", function (e) {
+            var keycode = (e.keyCode ? e.keyCode : e.wich)
+
+            if (keycode < 48 || keycode > 58) {
+                e.preventDefault();
+            }
+        })
+    </script>
 
 
 </asp:Content>
