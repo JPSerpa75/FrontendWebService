@@ -26,8 +26,7 @@
 
     <script>
         var txtAltura = document.getElementById("MainContent_txtAltura");
-        alert("Teste");
-        txtAltura.addEventListener("keypress", function (e) {
+            txtAltura.addEventListener("keypress", function (e) {
             var keycode = (e.keyCode ? e.keyCode : e.wich)
 
             if ((keycode < 48 || keycode > 58) && keycode !== 44) {
