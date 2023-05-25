@@ -7,10 +7,10 @@
         <form action="/" method="post">
 
             <asp:Label ID="lblPeso" runat="server" Text="Peso: "></asp:Label> <br />
-            <asp:TextBox ID="txtPeso" runat="server" type="number"></asp:TextBox> <br />
+            <asp:TextBox ID="txtPeso" runat="server" ></asp:TextBox> <br />
 
             <asp:Label ID="lblAltura" runat="server" Text="Altura: "></asp:Label> <br />
-            <asp:TextBox ID="txtAltura" runat="server" type="number"></asp:TextBox>
+            <asp:TextBox ID="txtAltura" runat="server" ></asp:TextBox>
 
             <asp:Button ID="btnImc" runat="server" Text="Calcular" OnClick="btnImc_Click" />
 
