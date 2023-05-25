@@ -13,7 +13,7 @@
 // 
 #pragma warning disable 1591
 
-namespace FrontendWebService.localhost {
+namespace FrontendWebService.WsBackend {
     using System;
     using System.Web.Services;
     using System.Diagnostics;

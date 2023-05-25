@@ -27,9 +27,9 @@ namespace FrontendWebService.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
         [global::System.Configuration.DefaultSettingValueAttribute("https://localhost:44385/BackEnd.asmx")]
-        public string FrontendWebService_localhost_BackEnd {
+        public string FrontendWebService_WsBackend_BackEnd {
             get {
-                return ((string)(this["FrontendWebService_localhost_BackEnd"]));
+                return ((string)(this["FrontendWebService_WsBackend_BackEnd"]));
             }
         }
     }

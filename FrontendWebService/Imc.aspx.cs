@@ -18,8 +18,8 @@ namespace FrontendWebService
         {
             var peso = float.Parse(txtPeso.Text);
             var altura = float.Parse(txtAltura.Text);
-            localhost.BackEnd lc = new localhost.BackEnd();
-            var resultado = lc.calcularImc(peso, altura);
+            WsBackend.BackEnd wc = new WsBackend.BackEnd();
+            var resultado = wc.calcularImc(peso, altura);
             lblResultado.Text = resultado.ToString();
 
         }
