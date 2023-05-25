@@ -16,10 +16,12 @@ namespace FrontendWebService
 
         protected void btnImc_Click(object sender, EventArgs e)
         {
-            var peso = Convert.ToDecimal(txtPeso.Text);
-            var altura = Convert.ToDecimal(txtAltura.Text);
-            var soma = peso + altura;
-            lblResultado.Text = soma.ToString();
+            var peso = float.Parse(txtPeso.Text);
+            var altura = float.Parse(txtAltura.Text);
+            localhost.BackEnd lc = new localhost.BackEnd();
+            var resultado = lc.calcularImc(peso, altura);
+            lblResultado.Text = resultado.ToString();
+
         }
     }
 }

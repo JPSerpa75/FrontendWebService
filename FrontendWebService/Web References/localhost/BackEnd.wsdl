@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="calculadora">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="n1" type="s:float" />
+            <s:element minOccurs="1" maxOccurs="1" name="n2" type="s:float" />
+            <s:element minOccurs="0" maxOccurs="1" name="operador" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="calculadoraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="calculadoraResult" type="s:float" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fatorial">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="x" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fatorialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fatorialResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="calcularImc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="peso" type="s:float" />
+            <s:element minOccurs="1" maxOccurs="1" name="altura" type="s:float" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="calcularImcResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="calcularImcResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="conversao">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="metros" type="s:float" />
+            <s:element minOccurs="0" maxOccurs="1" name="medida" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="conversaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="conversaoResult" type="s:float" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="calculadoraSoapIn">
+    <wsdl:part name="parameters" element="tns:calculadora" />
+  </wsdl:message>
+  <wsdl:message name="calculadoraSoapOut">
+    <wsdl:part name="parameters" element="tns:calculadoraResponse" />
+  </wsdl:message>
+  <wsdl:message name="fatorialSoapIn">
+    <wsdl:part name="parameters" element="tns:fatorial" />
+  </wsdl:message>
+  <wsdl:message name="fatorialSoapOut">
+    <wsdl:part name="parameters" element="tns:fatorialResponse" />
+  </wsdl:message>
+  <wsdl:message name="calcularImcSoapIn">
+    <wsdl:part name="parameters" element="tns:calcularImc" />
+  </wsdl:message>
+  <wsdl:message name="calcularImcSoapOut">
+    <wsdl:part name="parameters" element="tns:calcularImcResponse" />
+  </wsdl:message>
+  <wsdl:message name="conversaoSoapIn">
+    <wsdl:part name="parameters" element="tns:conversao" />
+  </wsdl:message>
+  <wsdl:message name="conversaoSoapOut">
+    <wsdl:part name="parameters" element="tns:conversaoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="BackEndSoap">
+    <wsdl:operation name="calculadora">
+      <wsdl:input message="tns:calculadoraSoapIn" />
+      <wsdl:output message="tns:calculadoraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fatorial">
+      <wsdl:input message="tns:fatorialSoapIn" />
+      <wsdl:output message="tns:fatorialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="calcularImc">
+      <wsdl:input message="tns:calcularImcSoapIn" />
+      <wsdl:output message="tns:calcularImcSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="conversao">
+      <wsdl:input message="tns:conversaoSoapIn" />
+      <wsdl:output message="tns:conversaoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BackEndSoap" type="tns:BackEndSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="calculadora">
+      <soap:operation soapAction="http://tempuri.org/calculadora" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fatorial">
+      <soap:operation soapAction="http://tempuri.org/fatorial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="calcularImc">
+      <soap:operation soapAction="http://tempuri.org/calcularImc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="conversao">
+      <soap:operation soapAction="http://tempuri.org/conversao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BackEndSoap12" type="tns:BackEndSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="calculadora">
+      <soap12:operation soapAction="http://tempuri.org/calculadora" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fatorial">
+      <soap12:operation soapAction="http://tempuri.org/fatorial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="calcularImc">
+      <soap12:operation soapAction="http://tempuri.org/calcularImc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="conversao">
+      <soap12:operation soapAction="http://tempuri.org/conversao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BackEnd">
+    <wsdl:port name="BackEndSoap" binding="tns:BackEndSoap">
+      <soap:address location="https://localhost:44385/BackEnd.asmx" />
+    </wsdl:port>
+    <wsdl:port name="BackEndSoap12" binding="tns:BackEndSoap12">
+      <soap12:address location="https://localhost:44385/BackEnd.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
