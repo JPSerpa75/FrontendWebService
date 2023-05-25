@@ -13,5 +13,26 @@ namespace FrontendWebService
         {
 
         }
+
+        protected void btnCalcular_Click(object sender, EventArgs e)
+        {
+            var valor = txtValor.Text;
+
+            if (valor == "" || valor == null)
+            {
+                lblResposta.InnerText = "Informe um valor!";
+                return;
+            }
+
+
+
+            WsBackend.BackEnd ws = new WsBackend.BackEnd();
+            var resposta = ws.fatorial(Convert.ToInt32(valor));
+
+            lblResposta.InnerText = resposta.ToString();
+
+
+            txtValor.Text = "";
+        }
     }
 }

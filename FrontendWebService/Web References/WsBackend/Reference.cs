@@ -41,7 +41,7 @@ namespace FrontendWebService.WsBackend {
         
         /// <remarks/>
         public BackEnd() {
-            this.Url = global::FrontendWebService.Properties.Settings.Default.FrontendWebService_localhost_BackEnd;
+            this.Url = global::FrontendWebService.Properties.Settings.Default.FrontendWebService_WsBackend_BackEnd;
             if ((this.IsLocalFileSystemWebService(this.Url) == true)) {
                 this.UseDefaultCredentials = true;
                 this.useDefaultCredentialsSetExplicitly = false;
