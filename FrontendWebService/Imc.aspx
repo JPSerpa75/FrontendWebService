@@ -2,19 +2,38 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h1>Cálculo de IMC</h1>
-    <div>
-        <form action="/" method="post">
+    <h3>Calculo de IMC</h3>
 
-            <asp:Label ID="lblPeso" runat="server" Text="Peso: "></asp:Label> <br />
-            <asp:TextBox ID="txtPeso" runat="server" ></asp:TextBox> <br />
+    <div class="form-group">
 
-            <asp:Label ID="lblAltura" runat="server" Text="Altura: "></asp:Label> <br />
-            <asp:TextBox ID="txtAltura" runat="server" ></asp:TextBox>
+        <div class="content">
+            <label class="d-block form-label">Peso:</label>
+            <asp:TextBox class="form-control" ID="txtPeso" runat="server" placeholder="Digite sua peso"></asp:TextBox>
 
-            <asp:Button ID="btnImc" runat="server" Text="Calcular" OnClick="btnImc_Click" />
+            <label class="d-block form-label">Altura:</label>
+            <asp:TextBox class="form-control" ID="txtAltura" runat="server" placeholder="Digite sua altura"></asp:TextBox>
 
-            <asp:Label ID="lblResultado" runat="server" Text="Resultado: "></asp:Label> <br />
-        </form>
+            <div class="row">
+                <asp:Button class="btn btn-primary" ID="btnCalcular" runat="server" Text="Calcular" OnClick="btnCalcular_Click" />
+            </div>
+        </div>
+
+        <div>
+            <label id="lblResposta" runat="server"></label>
+        </div>
+
     </div>
+
+    <script>
+        var txtAltura = document.getElementById("MainContent_txtAltura");
+        alert("Teste");
+        txtAltura.addEventListener("keypress", function (e) {
+            var keycode = (e.keyCode ? e.keyCode : e.wich)
+
+            if ((keycode < 48 || keycode > 58) && keycode !== 44) {
+                e.preventDefault();
+            }
+        })
+    </script>
+
 </asp:Content>

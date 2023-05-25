@@ -15,15 +15,6 @@ namespace FrontendWebService
     {
 
         /// <summary>
-        /// Controle lblPeso.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPeso;
-
-        /// <summary>
         /// Controle txtPeso.
         /// </summary>
         /// <remarks>
@@ -31,15 +22,6 @@ namespace FrontendWebService
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPeso;
-
-        /// <summary>
-        /// Controle lblAltura.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAltura;
 
         /// <summary>
         /// Controle txtAltura.
@@ -51,21 +33,21 @@ namespace FrontendWebService
         protected global::System.Web.UI.WebControls.TextBox txtAltura;
 
         /// <summary>
-        /// Controle btnImc.
+        /// Controle btnCalcular.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnImc;
+        protected global::System.Web.UI.WebControls.Button btnCalcular;
 
         /// <summary>
-        /// Controle lblResultado.
+        /// Controle lblResposta.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblResultado;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblResposta;
     }
 }
