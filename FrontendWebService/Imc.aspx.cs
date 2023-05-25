@@ -14,13 +14,13 @@ namespace FrontendWebService
 
         }
 
-        protected void btnImc_Click(object sender, EventArgs e)
+        protected void btnCalcular_Click(object sender, EventArgs e)
         {
             var peso = float.Parse(txtPeso.Text);
             var altura = float.Parse(txtAltura.Text);
             WsBackend.BackEnd wc = new WsBackend.BackEnd();
             var resultado = wc.calcularImc(peso, altura);
-            lblResultado.Text = resultado.ToString();
+            lblResposta.InnerText = resultado.ToString();
 
         }
     }
