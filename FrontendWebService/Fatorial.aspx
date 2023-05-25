@@ -9,7 +9,7 @@
 
         <div class="content">
             <label class="d-block form-label">Valor:</label>
-            <asp:TextBox class="form-control" ID="txtValor" runat="server" placeholder="digite um número"></asp:TextBox>
+            <asp:TextBox class="form-control" ID="txtValor" runat="server" placeholder="Digite um número"></asp:TextBox>
 
             <div class="row">
                 <asp:Button class="btn btn-primary" ID="btnCalcular" runat="server" Text="Calcular" OnClick="btnCalcular_Click" />
