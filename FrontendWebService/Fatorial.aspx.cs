@@ -27,7 +27,7 @@ namespace FrontendWebService
 
 
             WsBackend.BackEnd ws = new WsBackend.BackEnd();
-            var resposta = ws.fatorial(Convert.ToInt32(valor));
+            var resposta = ws.fatorial(long.Parse(valor));
 
             lblResposta.InnerText = resposta.ToString();
 

@@ -21,14 +21,14 @@
       <s:element name="fatorial">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="x" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="x" type="s:long" />
           </s:sequence>
         </s:complexType>
       </s:element>
       <s:element name="fatorialResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="fatorialResult" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fatorialResult" type="s:long" />
           </s:sequence>
         </s:complexType>
       </s:element>

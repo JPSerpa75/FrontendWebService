@@ -122,19 +122,19 @@ namespace FrontendWebService.WsBackend {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/fatorial", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public int fatorial(int x) {
+        public long fatorial(long x) {
             object[] results = this.Invoke("fatorial", new object[] {
                         x});
-            return ((int)(results[0]));
+            return ((long)(results[0]));
         }
         
         /// <remarks/>
-        public void fatorialAsync(int x) {
+        public void fatorialAsync(long x) {
             this.fatorialAsync(x, null);
         }
         
         /// <remarks/>
-        public void fatorialAsync(int x, object userState) {
+        public void fatorialAsync(long x, object userState) {
             if ((this.fatorialOperationCompleted == null)) {
                 this.fatorialOperationCompleted = new System.Threading.SendOrPostCallback(this.OnfatorialOperationCompleted);
             }
@@ -274,10 +274,10 @@ namespace FrontendWebService.WsBackend {
         }
         
         /// <remarks/>
-        public int Result {
+        public long Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((int)(this.results[0]));
+                return ((long)(this.results[0]));
             }
         }
     }
