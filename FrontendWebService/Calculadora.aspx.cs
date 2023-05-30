@@ -35,6 +35,12 @@ namespace FrontendWebService
             }
             else
             {
+                if(v2 == 0)
+                {
+                    lblResposta.InnerText = "Não existe divisão";
+                    Response.Redirect("https://descomplica.com.br/blog/voce-vestibulando-que-ama-matematica-ja-tentou-dividir-por-zero/");
+                    return;
+                }
                 operador = RdBtnDiv.Value;
             }
             WsBackend.BackEnd wc = new WsBackend.BackEnd();

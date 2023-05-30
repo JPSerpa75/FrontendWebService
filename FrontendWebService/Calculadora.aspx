@@ -36,7 +36,7 @@
 
 
             <div class="row">
-                <asp:Button class="btn btn-primary" ID="btnCalcular" runat="server" Text="Converter" OnClick="btnCalcular_Click" />
+                <asp:Button class="btn btn-primary" ID="btnCalcular" runat="server" Text="Calcular" OnClick="btnCalcular_Click" />
             </div>
         </div>
 
