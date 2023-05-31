@@ -17,6 +17,14 @@ namespace FrontendWebService
 
         protected void btnCalcular_Click(object sender, EventArgs e)
         {
+
+            if (txtValor1 == null || txtValor2 == null || txtValor1.Text == "" || txtValor2.Text == "")
+            {
+
+                lblResposta.InnerText = "Preencha todos os campos!";
+
+                return;
+            }
             var v1 = float.Parse(txtValor1.Text);
             var v2 = float.Parse(txtValor2.Text);
             string operador;
